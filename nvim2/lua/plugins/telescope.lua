@@ -9,7 +9,6 @@ return {
       local actions = require('telescope.actions')
       local builtin = require('telescope.builtin')
       local fb_actions = require('telescope._extensions.file_browser.actions')
-  
       telescope.setup {
         defaults = {
           initial_mode = "normal",
@@ -45,14 +44,11 @@ return {
           },
         },
       }
-  
       -- Load Telescope extensions
       telescope.load_extension('file_browser')
-  
       -- Keybindings for launching Telescope pickers
       local opts = { noremap = true, silent = true }
       local keymap = vim.keymap.set
-  
       keymap('n', '<leader>ff', builtin.find_files, opts)
       keymap('n', '<leader>fg', builtin.live_grep, opts)
       keymap('n', '<leader>fb', builtin.buffers, opts)
@@ -61,4 +57,3 @@ return {
       keymap('n', '<leader>fe', telescope.extensions.file_browser.file_browser, opts)
     end,
   }
-  
