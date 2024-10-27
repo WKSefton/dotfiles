@@ -1,3 +1,4 @@
+vim.g.nofsync = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 

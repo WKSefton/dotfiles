@@ -11,7 +11,7 @@ return {
         local fb_actions = require('telescope._extensions.file_browser.actions')
         telescope.setup {
             defaults = {
-                initial_mode = "normal",
+                initial_mode = "insert",
                 mappings = {
                     i = {
                         ['<C-j>'] = actions.move_selection_next,
