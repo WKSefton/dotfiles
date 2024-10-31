@@ -54,7 +54,7 @@ return {
         local keymap = vim.keymap.set
         keymap("n", "<leader>fe", telescope.extensions.file_browser.file_browser, opts)
 
-        keymap("n", "<leader>gs", ":Telescope git_status<CR>", opts) -- Show Git status
+--        keymap("n", "<leader>gs", ":Telescope git_status<CR>", opts) -- Show Git status
         keymap("n", "<leader>gb", ":Telescope git_branches<CR>", opts) -- List Git branches
         keymap("n", "<leader>gc", ":Telescope git_commits<CR>", opts) -- List Git commits
         keymap("n", "<leader>gC", ":Telescope git_bcommits<CR>", opts) -- List buffer commits

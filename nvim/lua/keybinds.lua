@@ -38,3 +38,5 @@ keymap("n", "<leader>fo", ":Telescope oldfiles<CR>", opts)
 keymap("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 keymap("n", "<leader>fd", ":Format<CR>", opts)
+
+keymap("n", "<leader>gs", ":Neogit<CR>", opts)
