@@ -7,6 +7,13 @@ return {
         require("mason").setup({
             ensure_installed = { "luacheck", "csharpier", "golangci-lint", "stylua", "gofmt" },
             automatic_installation = true,
+            ui = {
+                icons = {
+                    package_installed = "✓",
+                    package_pending = "➜",
+                    package_uninstalled = "✗",
+                },
+            },
         })
         require("mason-lspconfig").setup({
             ensure_installed = {
