@@ -5,7 +5,7 @@ return {
 
         -- Configure linters for each language
         lint.linters_by_ft = {
-            lua = { "luacheck" }, -- Lua linter
+            lua = { "selene" }, -- Lua linter
             cs = { "csharpier" }, -- C# linter (or other if preferred)
             go = { "golangci-lint" }, -- Go linter
         }

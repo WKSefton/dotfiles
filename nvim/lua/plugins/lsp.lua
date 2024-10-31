@@ -1,11 +1,10 @@
 return {
     "williamboman/mason.nvim",
-    lazy = true,
-    event = "BufReadPre",
     dependencies = { "williamboman/mason-lspconfig.nvim", "neovim/nvim-lspconfig" },
     config = function()
         require("mason").setup({
-            ensure_installed = { "luacheck", "csharpier", "golangci-lint", "stylua", "gofmt" },
+            PATH = "prepend",
+            ensure_installed = { "selene", "csharpier", "golangci-lint", "stylua", "gofmt" },
             automatic_installation = true,
             ui = {
                 icons = {
@@ -33,6 +32,10 @@ return {
         lspconfig.lua_ls.setup({
             settings = {
                 Lua = {
+                    runtime = {
+                        version = "LuaJIT", -- Set Lua version
+                        path = vim.split(package.path, ";"),
+                    },
                     diagnostics = {
                         globals = { "vim" }, -- Recognize 'vim' as a global variable
                     },
