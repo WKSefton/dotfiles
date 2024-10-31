@@ -1,3 +1,5 @@
 return {
-  'Hoffs/omnisharp-extended-lsp.nvim',
+	"Hoffs/omnisharp-extended-lsp.nvim",
+	lazy = true,
+	ft = { "cs", "csharp" }, -- Load only for C# files
 }

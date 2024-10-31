@@ -31,4 +31,22 @@ require("lazy").setup({
   },
   install = { colorscheme = { "github_dark_default" } },
   checker = { enabled = true },
+    {
+  ui = {
+    border = "rounded",  -- Customize the border style if desired
+  },
+  performance = {
+    rtp = {
+      disabled_plugins = { -- Disable unneeded built-in plugins for faster startup
+        "gzip",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+        }}
 })
