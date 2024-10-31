@@ -9,7 +9,7 @@ return {
 			auto_install = true,
 			sync_install = true,
 			ignore_install = {},
-			ensure_installed = { "lua", "javascript", "c_sharp", "html", "css" }, -- Add languages you use
+			ensure_installed = { "lua", "javascript", "c_sharp", "html", "css", "go" }, -- Add languages you use
 			highlight = {
 				enable = true, -- Enable Tree-sitter based syntax highlighting
 			},

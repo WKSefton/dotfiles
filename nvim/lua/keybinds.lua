@@ -12,7 +12,7 @@ keymap("n", "gd", vim.lsp.buf.definition, opts)
 keymap("n", "<leader>rn", vim.lsp.buf.rename, opts)
 
 keymap("n", "<leader>ca", vim.lsp.buf.code_action, opts)
-keymap("n", "<leader>fd", vim.lsp.buf.format, opts)
+-- keymap("n", "<leader>fd", vim.lsp.buf.format, opts)
 
 keymap("n", "<leader>+", ":resize +5<CR>", opts)
 keymap("n", "<leader>-", ":resize -5<CR>", opts)
@@ -35,4 +35,6 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", opts)
 keymap("n", "<leader>fo", ":Telescope oldfiles<CR>", opts)
 --keymap("n", "<leader>fe", telescope.extensions.file_browser.file_browser, opts)
 
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+keymap("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+
+keymap("n", "<leader>fd", ":Format<CR>", opts)
