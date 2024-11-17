@@ -1,0 +1,147 @@
+#
+# ~/.bashrc
+#
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+fi
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# Use fzf for reverse search
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+bind '"\C-r": "\C-a fzf-history-widget\n"'
+
+fzf-history-widget() {
+    local selected
+    selected=$(history | fzf --tac | awk '{$1=""; print substr($0,2)}')
+    READLINE_LINE="$selected"
+    READLINE_POINT=${#READLINE_LINE}
+}
+# Enable fzf key bindings and completion
+[ -f /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
+[ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
+
+touchfile () {
+    local file="$1"
+    mkdir -p -- "$(dirname -- "$file")" &&
+        touch -- "$file"
+}
+nvimfzf () {
+    nvim $(fzf)
+}
+
+nvimfile () {
+    local file="$1"
+    touchfile "$file" && nvim "$file"
+}
+
+export MANPAGER="nvim +Man!"
+export EDITOR=vim
+
+# parse_git_branch() {
+#      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+# }
+
+#export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+#export PS1="\[\033[1;34m\]\u@\h\[\033[0m\] \[\033[1;32m\]\w\[\033[0m\] \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$: "
+#export PS1="\[\033[1;34m\]\u@\h\[\033[0m\] \[\033[1;32m\]\w\[\033[0m\] \[\033[1;36m\]\$(parse_git_branch)\[\033[0m\]\$ "
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+reload () {
+    source ~/.bashrc
+}
+
+[[ $- == *i* ]] && . /usr/share/bash-completion/bash_completion
+
+# source <(silver init)
+source ~/.bash-preexec/bash-preexec.sh
+
+# If not running interactively, don't do anything
+case $- in
+  *i*) ;;
+    *) return;;
+esac
+
+# Path to the bash it configuration
+export BASH_IT="/home/will/.bash_it"
+
+# Lock and Load a custom theme file.
+# Leave empty to disable theming.
+# location "$BASH_IT"/themes/
+export BASH_IT_THEME='bobby'
+
+# Some themes can show whether `sudo` has a current token or not.
+# Set `$THEME_CHECK_SUDO` to `true` to check every prompt:
+#THEME_CHECK_SUDO='true'
+
+# (Advanced): Change this to the name of your remote repo if you
+# cloned bash-it with a remote other than origin such as `bash-it`.
+# export BASH_IT_REMOTE='bash-it'
+
+# (Advanced): Change this to the name of the main development branch if
+# you renamed it or if it was changed for some reason
+# export BASH_IT_DEVELOPMENT_BRANCH='master'
+
+# Your place for hosting Git repos. I use this for private repos.
+export GIT_HOSTING='git@git.domain.com'
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
+
+# Change this to your console based IRC client of choice.
+export IRC_CLIENT='irssi'
+
+# Set this to the command you use for todo.txt-cli
+export TODO="t"
+
+# Set this to the location of your work or project folders
+#BASH_IT_PROJECT_PATHS="${HOME}/Projects:/Volumes/work/src"
+
+# Set this to false to turn off version control status checking within the prompt for all themes
+export SCM_CHECK=true
+# Set to actual location of gitstatus directory if installed
+#export SCM_GIT_GITSTATUS_DIR="$HOME/gitstatus"
+# per default gitstatus uses 2 times as many threads as CPU cores, you can change this here if you must
+#export GITSTATUS_NUM_THREADS=8
+
+# Set Xterm/screen/Tmux title with only a short hostname.
+# Uncomment this (or set SHORT_HOSTNAME to something else),
+# Will otherwise fall back on $HOSTNAME.
+#export SHORT_HOSTNAME=$(hostname -s)
+
+# Set Xterm/screen/Tmux title with only a short username.
+# Uncomment this (or set SHORT_USER to something else),
+# Will otherwise fall back on $USER.
+#export SHORT_USER=${USER:0:8}
+
+# If your theme use command duration, uncomment this to
+# enable display of last command duration.
+#export BASH_IT_COMMAND_DURATION=true
+# You can choose the minimum time in seconds before
+# command duration is displayed.
+#export COMMAND_DURATION_MIN_SECONDS=1
+
+# Set Xterm/screen/Tmux title with shortened command and directory.
+# Uncomment this to set.
+#export SHORT_TERM_LINE=true
+
+# Set vcprompt executable path for scm advance info in prompt (demula theme)
+# https://github.com/djl/vcprompt
+#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
+
+# (Advanced): Uncomment this to make Bash-it reload itself automatically
+# after enabling or disabling aliases, plugins, and completions.
+# export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
+
+# Uncomment this to make Bash-it create alias reload.
+# export BASH_IT_RELOAD_LEGACY=1
+
+# Load Bash It
+source "$BASH_IT"/bash_it.sh
+source ~/.bash-autosuggestions/autosuggestions.sh
