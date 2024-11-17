@@ -112,6 +112,7 @@ autoload -Uz compinit
 compinit
 
 # alias ls='ls --color=auto'
+alias timeshift-gui='pkexec env DISPLAY=$DISPLAY WAYLAND_DISPLAY=$WAYLAND_DISPLAY XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR timeshift-gtk'
 alias grep='grep --color=auto'
 alias reload="source ~/.zshrc"
 alias ec='nvim ~/.zshrc'
