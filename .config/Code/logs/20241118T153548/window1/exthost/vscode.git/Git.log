@@ -1,0 +1,109 @@
+2024-11-18 15:35:49.856 [info] [main] Log level: Info
+2024-11-18 15:35:49.856 [info] [main] Validating found git in: "git"
+2024-11-18 15:35:49.856 [info] [main] Using git "2.47.0" from "git"
+2024-11-18 15:35:49.856 [info] [Model][doInitialScan] Initial repository scan started
+2024-11-18 15:35:49.856 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-11-18 15:36:22.523 [info] [main] Log level: Info
+2024-11-18 15:36:22.523 [info] [main] Validating found git in: "git"
+2024-11-18 15:36:22.523 [info] [main] Using git "2.47.0" from "git"
+2024-11-18 15:36:22.523 [info] [Model][doInitialScan] Initial repository scan started
+2024-11-18 15:36:22.523 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:36:22.527 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2024-11-18 15:36:22.532 [info] [Model][openRepository] Opened repository: /home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn
+2024-11-18 15:36:22.549 [info] > git rev-parse --show-toplevel [10ms]
+2024-11-18 15:36:22.550 [info] > git config --get commit.template [14ms]
+2024-11-18 15:36:22.563 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:36:22.566 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2024-11-18 15:36:22.569 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:36:22.569 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:36:22.572 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2024-11-18 15:36:22.578 [info] > git rev-parse --show-toplevel [6ms]
+2024-11-18 15:36:22.584 [info] > git status -z -uall [9ms]
+2024-11-18 15:36:22.585 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [7ms]
+2024-11-18 15:36:22.594 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2024-11-18 15:36:22.597 [info] > git rev-parse --show-toplevel [16ms]
+2024-11-18 15:36:22.600 [info] > git config --local branch.main.vscode-merge-base [4ms]
+2024-11-18 15:36:22.600 [warning] [Git][config] git config failed: Failed to execute git
+2024-11-18 15:36:22.602 [info] > git config --get commit.template [9ms]
+2024-11-18 15:36:22.602 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:36:22.623 [info] > git reflog main --grep-reflog=branch: Created from *. [21ms]
+2024-11-18 15:36:22.636 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [11ms]
+2024-11-18 15:36:22.639 [info] > git rev-parse --show-toplevel [16ms]
+2024-11-18 15:36:22.639 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [18ms]
+2024-11-18 15:36:22.644 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:36:22.644 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [5ms]
+2024-11-18 15:36:22.647 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2024-11-18 15:36:22.652 [info] > git rev-parse --show-toplevel [10ms]
+2024-11-18 15:36:22.654 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-11-18 15:36:22.654 [info] > git status -z -uall [5ms]
+2024-11-18 15:36:22.654 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2024-11-18 15:36:22.659 [info] > git config --local branch.main.vscode-merge-base origin/main [12ms]
+2024-11-18 15:36:22.662 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2024-11-18 15:36:22.665 [info] > git config --get commit.template [3ms]
+2024-11-18 15:36:22.666 [info] > git config --local branch.main.vscode-merge-base [1ms]
+2024-11-18 15:36:22.671 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [3ms]
+2024-11-18 15:36:22.679 [info] > git merge-base refs/heads/main refs/remotes/origin/main [5ms]
+2024-11-18 15:36:22.682 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [11ms]
+2024-11-18 15:36:22.684 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:36:22.684 [info] > git diff --name-status -z --diff-filter=ADMR 4a17a2cf67d8ba7ee259364ecd05bb26ee71037a...refs/remotes/origin/main [2ms]
+2024-11-18 15:36:22.685 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-11-18 15:36:22.690 [info] > git status -z -uall [3ms]
+2024-11-18 15:36:22.691 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:36:23.054 [info] > git check-ignore -v -z --stdin [1ms]
+2024-11-18 15:36:23.734 [info] > git config --get commit.template [3ms]
+2024-11-18 15:36:23.735 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-11-18 15:36:23.737 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:36:23.737 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2024-11-18 15:36:23.744 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:36:23.745 [info] > git status -z -uall [5ms]
+2024-11-18 15:36:26.175 [info] > git show --textconv :middleware.ts [4ms]
+2024-11-18 15:36:26.176 [info] > git ls-files --stage -- /home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/middleware.ts [1ms]
+2024-11-18 15:36:26.185 [info] > git cat-file -s 21b699fbcefacec8c728d39b8383d90e456191f9 [5ms]
+2024-11-18 15:36:54.668 [info] > git check-ignore -v -z --stdin [1ms]
+2024-11-18 15:36:57.996 [info] > git check-ignore -v -z --stdin [0ms]
+2024-11-18 15:36:58.439 [info] > git config --get commit.template [4ms]
+2024-11-18 15:36:58.440 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-11-18 15:36:58.443 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:36:58.444 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-11-18 15:36:58.450 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:36:58.451 [info] > git status -z -uall [5ms]
+2024-11-18 15:37:08.396 [info] > git check-ignore -v -z --stdin [0ms]
+2024-11-18 15:37:08.721 [info] > git config --get commit.template [3ms]
+2024-11-18 15:37:08.721 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [0ms]
+2024-11-18 15:37:08.724 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:37:08.725 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-11-18 15:37:08.731 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:37:08.732 [info] > git status -z -uall [4ms]
+2024-11-18 15:37:34.248 [info] > git config --get commit.template [3ms]
+2024-11-18 15:37:34.249 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-11-18 15:37:34.252 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:37:34.253 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-11-18 15:37:34.258 [info] > git status -z -uall [3ms]
+2024-11-18 15:37:34.258 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [0ms]
+2024-11-18 15:38:01.631 [info] > git show --textconv :.env.local [0ms]
+2024-11-18 15:38:01.638 [info] > git ls-files --stage -- /home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.env.local [1ms]
+2024-11-18 15:38:01.906 [info] > git check-ignore -v -z --stdin [0ms]
+2024-11-18 15:38:02.849 [info] > git config --get commit.template [4ms]
+2024-11-18 15:38:02.849 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [0ms]
+2024-11-18 15:38:02.852 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:38:02.853 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-11-18 15:38:02.859 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:38:02.860 [info] > git status -z -uall [5ms]
+2024-11-18 15:38:07.866 [info] > git config --get commit.template [1ms]
+2024-11-18 15:38:07.869 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-11-18 15:38:07.872 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:38:07.873 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2024-11-18 15:38:07.878 [info] > git status -z -uall [3ms]
+2024-11-18 15:38:07.879 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:41:22.804 [info] > git config --get commit.template [4ms]
+2024-11-18 15:41:22.805 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-11-18 15:41:22.808 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:41:22.809 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2024-11-18 15:41:22.814 [info] > git status -z -uall [3ms]
+2024-11-18 15:41:22.815 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:43:45.844 [info] > git config --get commit.template [4ms]
+2024-11-18 15:43:45.845 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2024-11-18 15:43:45.848 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/will/dev/ecommerce-app-sanity-nextjs-15-clerk-typescript-groq-shadcn/.git/refs/remotes/origin/main'
+2024-11-18 15:43:45.848 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2024-11-18 15:43:45.854 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:43:45.855 [info] > git status -z -uall [4ms]

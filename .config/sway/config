@@ -20,3 +20,5 @@ bar {
 
 include /etc/sway/config.d/*
 include custom
+
+exec clipman store &

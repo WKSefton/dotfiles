@@ -4,7 +4,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$PATH:$(go env GOPATH)/bin
-
+ZSH_THEME="agnoster"
 PROMPT='%F{cyan}%n%f@%F{blue}%m %F{yellow}%~%f $(git_prompt_info) %F{green}\u276f%f '
 RPROMPT='%F{magenta}%*%f'
 
@@ -114,9 +114,10 @@ compinit
 # alias ls='ls --color=auto'
 alias timeshift-gui='pkexec env DISPLAY=$DISPLAY WAYLAND_DISPLAY=$WAYLAND_DISPLAY XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR timeshift-gtk'
 alias grep='grep --color=auto'
-alias reload="source ~/.zshrc"
-alias ec='nvim ~/.zshrc'
-alias ls='eza -alh --header --group --git --icons --color=always'
+alias reload="source ~/.zshrc &"
+alias ec='nvim ~/.zshrc &'
+alias package-list='paru -Qqe > ~/.pkglist.paru.txt &'
+alias ls='eza -alh --header --group --git --icons --color=always &'
 
 touchfile () {
     local file="$1"
@@ -137,7 +138,7 @@ vf() {
 }
 
 # Preserve FZF_DEFAULT_COMMAND for normal fzf usage
-export FZF_DEFAULT_COMMAND='find .'
+#export FZF_DEFAULT_COMMAND='find .'
 export FZF_DEFAULT_OPTS='--height=40% --layout=reverse --border'
 
 # Bind fzf to Ctrl-R for reverse history search

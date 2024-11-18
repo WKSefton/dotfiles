@@ -4,6 +4,7 @@ base-devel
 bash-completion
 btop-git
 btrfs-progs
+clipman
 cmake
 dkms
 docker
@@ -19,6 +20,8 @@ firefox
 fzf
 git
 go
+go-task
+goose
 grim
 htop
 hyprland
@@ -63,6 +66,7 @@ rust
 slurp
 smartmontools
 sof-firmware
+sqlc
 sway-git
 timeshift
 ttf-firacode-nerd

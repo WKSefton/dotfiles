@@ -1,0 +1,14 @@
+2024-11-18 15:44:40.509 [info] Extension host with pid 39462 started
+2024-11-18 15:44:40.509 [info] Skipping acquiring lock for /home/will/.config/Code/User/workspaceStorage/57fc15650ec83789b0ed011ae3cfa0cc.
+2024-11-18 15:44:40.584 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-11-18 15:44:40.610 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-11-18 15:44:40.611 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2024-11-18 15:44:40.632 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-11-18 15:44:40.671 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-18 15:44:40.728 [info] Eager extensions activated
+2024-11-18 15:44:40.760 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-18 15:44:40.761 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-18 15:44:40.842 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-11-18 15:44:45.673 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2024-11-18 15:44:45.679 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2024-11-18 15:44:45.685 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'

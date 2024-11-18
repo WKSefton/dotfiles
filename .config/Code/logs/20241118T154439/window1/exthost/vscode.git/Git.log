@@ -1,0 +1,35 @@
+2024-11-18 15:44:40.744 [info] [main] Log level: Info
+2024-11-18 15:44:40.744 [info] [main] Validating found git in: "git"
+2024-11-18 15:44:40.744 [info] [main] Using git "2.47.0" from "git"
+2024-11-18 15:44:40.744 [info] [Model][doInitialScan] Initial repository scan started
+2024-11-18 15:44:40.744 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-18 15:44:40.744 [info] > git rev-parse --git-dir --git-common-dir [1ms]
+2024-11-18 15:44:40.750 [info] [Model][openRepository] Opened repository: /home/will/dev/dkm-design
+2024-11-18 15:44:40.760 [info] > git config --get commit.template [5ms]
+2024-11-18 15:44:40.775 [info] > git rev-parse --show-toplevel [16ms]
+2024-11-18 15:44:40.797 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:44:40.797 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2024-11-18 15:44:40.803 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-18 15:44:40.814 [info] > git status -z -uall [7ms]
+2024-11-18 15:44:40.814 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
+2024-11-18 15:44:40.824 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [5ms]
+2024-11-18 15:44:40.827 [info] > git rev-parse --show-toplevel [14ms]
+2024-11-18 15:44:40.830 [info] > git config --local branch.main.vscode-merge-base [3ms]
+2024-11-18 15:44:40.830 [warning] [Git][config] git config failed: Failed to execute git
+2024-11-18 15:44:40.833 [info] > git config --get commit.template [10ms]
+2024-11-18 15:44:40.833 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:44:40.839 [info] > git reflog main --grep-reflog=branch: Created from *. [6ms]
+2024-11-18 15:44:40.842 [info] > git rev-parse --show-toplevel [3ms]
+2024-11-18 15:44:40.842 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2024-11-18 15:44:40.862 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [20ms]
+2024-11-18 15:44:40.862 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2024-11-18 15:44:40.862 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2024-11-18 15:44:40.878 [info] > git merge-base refs/heads/main refs/remotes/origin/main [13ms]
+2024-11-18 15:44:40.882 [info] > git rev-parse --show-toplevel [21ms]
+2024-11-18 15:44:40.883 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2024-11-18 15:44:40.884 [info] > git diff --name-status -z --diff-filter=ADMR 66093ba347665fd0e58752ab6d0dc0379fe4e9ff...refs/remotes/origin/main [2ms]
+2024-11-18 15:44:40.890 [info] > git status -z -uall [3ms]
+2024-11-18 15:44:40.891 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [1ms]
+2024-11-18 15:44:41.081 [info] > git show --textconv :.env.local [5ms]
+2024-11-18 15:44:41.082 [info] > git ls-files --stage -- /home/will/dev/dkm-design/.env.local [1ms]
+2024-11-18 15:44:41.281 [info] > git check-ignore -v -z --stdin [1ms]

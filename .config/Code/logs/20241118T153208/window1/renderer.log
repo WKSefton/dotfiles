@@ -1,0 +1,23 @@
+2024-11-18 15:32:09.153 [info] Started local extension host with pid 36297.
+2024-11-18 15:32:09.359 [info] Settings Sync: Updating due to initialize
+2024-11-18 15:32:09.359 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.359 [info] Settings Sync: Authentication providers updated []
+2024-11-18 15:32:09.437 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.437 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-18 15:32:09.438 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.438 [info] Settings Sync: Authentication providers updated ["github"]
+2024-11-18 15:32:09.438 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.438 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-18 15:32:09.438 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.438 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-18 15:32:09.449 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-18 15:32:09.449 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.449 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-18 15:32:09.449 [info] Settings Sync: Updating due to declared authentication providers changed
+2024-11-18 15:32:09.450 [info] Settings Sync: Updating authentication providers. Authentication Providers from store: [{"id":"github","scopes":["user:email"]},{"id":"microsoft","scopes":["openid","profile","email","offline_access"]}]
+2024-11-18 15:32:09.450 [info] Settings Sync: Authentication providers updated ["github","microsoft"]
+2024-11-18 15:32:11.762 [info] [perf] Render performance baseline is 14ms
+2024-11-18 15:34:06.848 [error] spawn linux ENOENT: Error: spawn linux ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
