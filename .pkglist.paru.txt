@@ -19,12 +19,14 @@ fd
 firefox
 fzf
 git
+github-cli
 go
 go-task
 goose
 grim
 htop
 hyprland
+imagemagick
 intel-ucode
 iwd
 kio-admin
@@ -38,6 +40,7 @@ ly
 man-db
 man-pages
 mcontrolcenter-bin
+mongodb-bin
 nano
 neofetch-git
 neovim
@@ -47,7 +50,9 @@ noto-fonts-emoji
 npm
 nvidia-dkms
 nvidia-settings
+nvm
 nwg-displays
+openslide
 openssh
 paru
 paru-debug
@@ -67,11 +72,13 @@ slurp
 smartmontools
 sof-firmware
 sqlc
+stripe-cli
 sway-git
 timeshift
 ttf-firacode-nerd
 ufw
 vim
+visual-studio-code-bin
 waybar
 wayclip
 wdisplays-git
@@ -84,5 +91,6 @@ wpa_supplicant
 xdg-desktop-portal-hyprland
 xdg-utils
 yadm
+yarn
 zram-generator
 zsh
