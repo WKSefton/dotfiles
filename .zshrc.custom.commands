@@ -40,6 +40,7 @@ manage_ports() {
     local rules=(
         "from 127.0.0.1 to any port 6379"  # Redis (Localhost only)
         "from 127.0.0.1 to any port 27017" # MongoDB (Localhost only)
+        "from 192.168.1.0/24 to any port 8096" # Emby
         "from 192.168.1.0/24 to any port 5432"  # PostgreSQL (Local Network)
         "from 192.168.1.0/24 to any port 5000"  # Flask (Local Network)
         "from 192.168.1.0/24 to any port 8000"  # Django (Local Network)
@@ -57,7 +58,7 @@ manage_ports() {
 
     echo "Ports $flag."
 }
-# Aliases for convenience
+
 alias enableports="manage_ports enable"
 alias disableports="manage_ports disable"
 
@@ -67,14 +68,21 @@ show_firewall() {
 
 # Bind fzf to Ctrl-R for reverse history search
 export FZF_DEFAULT_OPTS='--height=40% --layout=reverse --border'
-bindkey '^R' fzf-history-widget
-fzf-history-widget() {
-    local selected_command
-    selected_command=$(history | tac | awk '{ $1=""; print substr($0,2) }' | fzf --tac +s --height=40%)
+
+function fzf_history() {
+    local selected_command=$(fc -l 1 | awk '{$1=""; print substr($0,2)}' | \
+        fzf --reverse --prompt="Search History: " --height=40% \
+            --border --color=16 --ansi --preview="echo {}")
+    
     if [[ -n $selected_command ]]; then
-        BUFFER=$selected_command
-        CURSOR=$#BUFFER
-        zle reset-prompt
+        echo "Executing: $selected_command"
+        eval "$selected_command"
+    else
+        echo "No command selected."
     fi
 }
-zle -N fzf-history-widget
+# Create a Zsh widget for the function
+zle -N fzf_history_widget fzf_history
+
+# Bind the widget to Ctrl-R
+bindkey '^R' fzf_history_widget

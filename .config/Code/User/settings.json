@@ -16,4 +16,5 @@
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "chat.editing.alwaysSaveWithGeneratedChanges": true,
 }

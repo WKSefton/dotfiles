@@ -1,3 +1,6 @@
+unalias -a
+neofetch
+
 export PATH=$PATH:$(go env GOPATH)/bin
 PROMPT='%F{cyan}%n%f@%F{blue}%m %F{yellow}%~%f $(git_prompt_info) %F{green}\u276f%f '
 RPROMPT='%F{magenta}%*%f'
@@ -30,3 +33,4 @@ source /usr/share/nvm/init-nvm.sh
 
 # custom functions and aliases
 source ~/.zshrc.custom.commands
+source ~/.zshrc.common.aliases

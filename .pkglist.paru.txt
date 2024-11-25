@@ -42,6 +42,7 @@ man-pages
 mcontrolcenter-bin
 mongodb-bin
 nano
+needrestart-git
 neofetch-git
 neovim
 networkmanager
