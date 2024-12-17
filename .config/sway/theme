@@ -1,0 +1,20 @@
+# Remove window title bars
+default_border pixel 1
+default_floating_border pixel 1
+
+# GitHub Dark Theme Variables
+set $bg        #0d1117
+set $bg_alt    #161b22
+set $fg        #c9d1d9
+set $accent    #58a6ff
+set $urgent    #f85149
+set $inactive  #30363d
+
+gaps inner 6
+gaps outer 0
+
+client.focused          $bg_alt $accent $accent $accent
+client.focused_inactive $inactive $bg_alt $fg $fg
+client.unfocused        $bg $bg $fg $fg
+client.urgent           $urgent $urgent $fg $fg
+client.placeholder      $inactive $inactive $fg $fg
