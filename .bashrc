@@ -12,7 +12,53 @@ alias package-list='paru -Qqe > ~/.pkglist.paru.txt &'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-PS1='[\u@\h \W]\$ '
+
+# ANSI color codes WITH bracket escapes for PS1:
+COLOR_WHITE="\[\033[38;5;250m\]"
+COLOR_BLUE="\[\033[38;5;75m\]"
+COLOR_RESET="\[\033[0m\]"
+TIME_COLOR="\[\033[38;5;244m\]"
+
+# Git branch function
+git_branch() {
+  local branch
+  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null) || return
+  echo -n " $branch"
+}
+
+# Build single-line prompt
+build_prompt_line() {
+  # Left: user@host + path + (git_branch if any)
+  local left="${COLOR_WHITE}\u@\h${COLOR_RESET} ${COLOR_BLUE}\w${COLOR_RESET}"
+  local branch=$(git_branch)
+  if [ -n "$branch" ]; then
+    left="$left $branch"
+  fi
+
+  # Right: the current time [HH:MM:SS]
+  local right="${TIME_COLOR}[$(date +'%H:%M:%S')]${COLOR_RESET}"
+
+  # Remove bracketed escapes for length calculation
+  local left_stripped=$(echo -e "$left" | sed 's/\x1B\[[0-9;]*m//g')
+  local right_stripped=$(echo -e "$right" | sed 's/\x1B\[[0-9;]*m//g')
+
+  # Terminal width
+  local columns=$(tput cols)
+
+  local left_len=${#left_stripped}
+  local right_len=${#right_stripped}
+  local spaces=$(( columns - left_len - right_len ))
+  [ $spaces -lt 1 ] && spaces=1  # ensure minimal spacing
+
+  # Return combined line: left + spaces + right
+  echo -e "${left}$(printf '%*s' $spaces)${right}"
+}
+
+# PROMPT_COMMAND calls the single-line builder just before the PS1 prompt
+PROMPT_COMMAND='PS1="$(build_prompt_line)\n\$ "'
+
+
+
 
 export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin
