@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export EDITOR="nvim"
 
 alias reload="source ~/.bashrc"
 alias ec='nvim ~/.bashrc'
@@ -56,12 +57,6 @@ build_prompt_line() {
 
 # PROMPT_COMMAND calls the single-line builder just before the PS1 prompt
 PROMPT_COMMAND='PS1="$(build_prompt_line)\n\$ "'
-
-
-
-
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
 
 # Enable or disable restricted development ports
 manage_ports() {
