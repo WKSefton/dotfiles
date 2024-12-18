@@ -17,6 +17,8 @@ firefox
 foot
 fzf
 git
+go
+gopls
 grim
 gst-plugin-pipewire
 gvfs
@@ -28,9 +30,10 @@ limine
 linux
 linux-firmware
 linux-headers
+luarocks
 ly
-nano
 neovim
+npm
 nvidia-dkms
 nwg-displays
 openssh
@@ -45,7 +48,7 @@ pipewire-pulse
 power-profiles-daemon
 ranger
 ripgrep
-slurp
+rust
 smartmontools
 sof-firmware
 sway-git
@@ -54,7 +57,6 @@ swayidle
 swaylock
 thunar
 ttf-firacode-nerd
-ttf-jetbrains-mono
 ufw
 vim
 waybar
@@ -62,7 +64,6 @@ wget
 wireless_tools
 wireplumber
 wl-clipboard
-wmenu
 wofi
 wpa_supplicant
 xdg-utils

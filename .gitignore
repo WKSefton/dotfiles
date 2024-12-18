@@ -17,6 +17,9 @@
 .config/systemd
 .config/xfce4
 .config/go
+.config/pulse
+.config/nwg-displays
+.config/pavucontrol.ini
 
 .ignore
 .gitconfig
