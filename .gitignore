@@ -21,3 +21,5 @@
 .ignore
 .gitconfig
 .ssh
+
+ go
