@@ -12,7 +12,7 @@ alias ec='nvim ~/.bashrc'
 alias package-list='paru -Qqe > ~/.pkglist.paru.txt &'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
+alias package-prune='paru -Rns $(pacman -Qdtq)'
 
 # ANSI color codes WITH bracket escapes for PS1:
 COLOR_WHITE="\[\033[38;5;250m\]"
@@ -99,3 +99,7 @@ manage_ports() {
 alias enableports="manage_ports enable"
 alias disableports="manage_ports disable"
 
+tere() {
+    local result=$(command tere "$@")
+    [ -n "$result" ] && cd -- "$result"
+}

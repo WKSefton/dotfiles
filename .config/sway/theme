@@ -10,7 +10,7 @@ set $accent    #58a6ff
 set $urgent    #f85149
 set $inactive  #30363d
 
-gaps inner 6
+gaps inner 0
 gaps outer 0
 
 client.focused          $bg_alt $accent $accent $accent
