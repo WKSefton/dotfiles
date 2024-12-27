@@ -72,11 +72,11 @@
   },
 
   "tray": {
-    "spacing": 10
+    "spacing": 5
   },
 
   "clock": {
-    "format": "{:%H:%M %z - %a, %d %B %Y}",
+    "format": "{:%H:%M - %a, %d %B %Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "interval": 60
   },

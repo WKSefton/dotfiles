@@ -1,6 +1,7 @@
 aria2
 base
 base-devel
+bash-completion
 bat
 brightnessctl
 btop-gpu-git
@@ -11,6 +12,7 @@ dunst
 emby-server
 envycontrol
 expressvpn
+eza
 fastfetch
 fd
 firefox
@@ -38,6 +40,7 @@ neovim
 npm
 nvidia-dkms
 nwg-displays
+openscad
 openssh
 paru
 paru-debug
@@ -49,7 +52,9 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 power-profiles-daemon
+powertop
 ranger
+reflector
 ripgrep
 rust
 smartmontools
@@ -59,6 +64,7 @@ swaybg
 swayidle
 swaylock
 television
+tere
 thunar
 tldr
 ttf-firacode-nerd
@@ -75,4 +81,5 @@ xdg-utils
 xorg-server
 xorg-xinit
 xorg-xwayland
+zathura
 zram-generator
