@@ -1,29 +1,33 @@
+.gitconfig
+
 .bash_history
 .bash_logout
 .bash_profile
 
+.ssh
 .cache
 .cargo
-.mozilla
 .local
 .gnupg
 .npm
 .node_repl_history
+.mozilla
+.vim
 
 .config/btop
+.config/htop
 .config/expressvpn
 .config/autostart
 .config/Thunar
 .config/systemd
 .config/xfce4
-.config/go
 .config/pulse
 .config/nwg-displays
 .config/pavucontrol.ini
 
 .ignore
-.gitconfig
-.ssh
-.vim
 
 go
+.config/go
+
+Downloads
