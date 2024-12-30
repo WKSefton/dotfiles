@@ -13,6 +13,11 @@
 .node_repl_history
 .mozilla
 .vim
+.pki
+.pulse-cookie
+.steam
+.steampath
+.steampid
 
 .config/btop
 .config/htop
@@ -24,6 +29,7 @@
 .config/pulse
 .config/nwg-displays
 .config/pavucontrol.ini
+.config/MControlCenter.conf
 
 .ignore
 

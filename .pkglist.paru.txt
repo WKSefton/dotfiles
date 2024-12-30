@@ -36,6 +36,7 @@ luarocks
 ly
 man-db
 man-pages
+mcontrolcenter-bin
 neovim
 npm
 nvidia-dkms
@@ -59,6 +60,7 @@ ripgrep
 rust
 smartmontools
 sof-firmware
+steam
 sway-git
 swaybg
 swayidle
