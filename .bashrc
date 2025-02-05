@@ -7,8 +7,13 @@
 
 unalias -a
 
+MOZ_ENABLE_WAYLAND=1
+export XCURSOR_THEME=Nordzy-cursors
+export XCURSOR_SIZE=24
+
 export EDITOR="nvim"
 
+alias poe2="cd '/home/will/.steam/steam/steamapps/compatdata/2694490/pfx/drive_c/users/steamuser/Documents/My Games/Path of Exile 2/'"
 alias reload="source ~/.bashrc"
 alias ec='nvim ~/.bashrc'
 alias package-list='paru -Qqe > ~/.pkglist.paru.txt &'

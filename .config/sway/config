@@ -2,6 +2,9 @@ include outputs-dual
 include keybinds
 include theme
 
+exec wl-paste -t text --watch clipman store
+bindsym $mod+y exec "clipman pick -t wofi --err-on-no-selection && wtype -M ctrl -M shift v"
+
 exec swayidle -w \
           timeout 300 'swaylock -f -c 000000' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
@@ -11,4 +14,4 @@ bar {
     swaybar_command waybar
 }
 
-include /etc/sway/config.d/*
+include /etc/sway/config.d/
