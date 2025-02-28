@@ -1,5 +1,6 @@
 return {
   "stevearc/oil.nvim",
+  -- enabled = false,
   lazy = true,
   cmd = { "Oil", "OilBrowse" },
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
@@ -9,9 +10,9 @@ return {
       default_file_explorer = true,
       columns = {
         "icon",
-        -- "permissions",
+        "permissions",
         "size",
-        -- "mtime",
+        "mtime",
       },
       delete_to_trash = false,
       skip_confirm_for_simple_edits = true,

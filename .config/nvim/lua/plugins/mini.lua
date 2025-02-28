@@ -1,9 +1,11 @@
 return {
-  "echasnovski/mini.nvim",
+  'echasnovski/mini.nvim',
   config = function()
-    require("mini.icons").setup({ style = "glyph" })
-    require("mini.move").setup({ use_icons = true })
-    require("mini.starter").setup({ use_icons = true })
-    require("mini.statusline").setup({ use_icons = true })
+    require('mini.icons').setup()
+    -- require('mini.surround').setup()
+    -- require('mini.jump2d').setup()
+    require('mini.move').setup()
+    require('mini.starter').setup()
+    require('mini.statusline').setup({ use_icons = true })
   end
 }

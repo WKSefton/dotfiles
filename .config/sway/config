@@ -5,6 +5,8 @@ include theme
 exec wl-paste -t text --watch clipman store
 bindsym $mod+y exec "clipman pick -t wofi --err-on-no-selection && wtype -M ctrl -M shift v"
 
+exec dunst
+
 exec swayidle -w \
           timeout 300 'swaylock -f -c 000000' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \

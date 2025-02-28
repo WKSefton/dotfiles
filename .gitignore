@@ -3,6 +3,7 @@
 .bash_history
 .bash_logout
 .bash_profile
+.bash_history**
 
 .ssh
 .cache
@@ -18,22 +19,38 @@
 .steam
 .steampath
 .steampid
-
-.config/btop
-.config/htop
-.config/expressvpn
-.config/autostart
-.config/Thunar
-.config/systemd
-.config/xfce4
-.config/pulse
-.config/nwg-displays
-.config/pavucontrol.ini
-.config/MControlCenter.conf
+.vscode/
+.wget-hsts
 
 .ignore
 
-go
-.config/go
+go/
+Downloads/
+projects/
 
-Downloads
+.config/go/
+.config/Code/
+.config/Electron/
+.config/Increlution/
+.config/Insomnia/
+.config/Postman/
+.config/cointop/
+.config/dconf/
+.config/gh/
+.config/gtk-3.0/
+.config/gtk-4.0/
+.config/mimeapps.list/
+.config/user-dirs.dirs/
+.config/user-dirs.locale/
+.config/vlc/
+.config/btop/
+.config/htop/
+.config/expressvpn/
+.config/autostart/
+.config/Thunar/
+.config/systemd/
+.config/xfce4/
+.config/pulse/
+.config/nwg-displays/
+.config/pavucontrol.ini
+.config/MControlCenter.conf

@@ -7,7 +7,22 @@ return {
       ignore_install = {},
       sync_install = false,
       auto_install = true,
-      ensure_installed = { "go", "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline" },
+      ensure_installed = {
+        "zig",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "json",
+        "go",
+        "c",
+        "lua",
+        "vim",
+        "vimdoc",
+        "query",
+        "markdown",
+        "markdown_inline"
+      },
       -- indent = { enable = true },
       incremental_selection = {
         enable = true,
