@@ -1,88 +1,179 @@
-.module {
-    background: transparent;
-    padding-top: 6px;
-    padding-right: 12px;
-    padding-left: 12px;
-    padding-bottom: 6px;
-    font-family: "FiraCode Nerd Font", monospace;
-    font-weight: 500;
-    color: #C9D1D9;
-}
+/* Catppuccin Mocha, floating pills */
+@define-color base     #1e1e2e;
+@define-color mantle   #181825;
+@define-color crust    #11111b;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color overlay0 #6c7086;
+@define-color subtext0 #a6adc8;
+@define-color text     #cdd6f4;
+@define-color lavender #b4befe;
+@define-color blue     #89b4fa;
+@define-color sapphire #74c7ec;
+@define-color teal     #94e2d5;
+@define-color green    #a6e3a1;
+@define-color yellow   #f9e2af;
+@define-color peach    #fab387;
+@define-color red      #f38ba8;
+@define-color mauve    #cba6f7;
+@define-color pink     #f5c2e7;
 
-#workspaces button {
-    font-size: 11pt;
-}
-
-#clock.date,
-#clock.time {
-    font-size: 9pt;
+* {
+    font-family: "FiraCode Nerd Font Propo", "Symbols Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
 }
 
 window#waybar {
-    background: rgba(13, 17, 23, 0.85);
-    padding: 6px;
-    border-radius: 2px;
-    font-family: "FiraCode Nerd Font", monospace;
-    color: #C9D1D9;
-    border: 2px solid #30363D;
+    background: transparent;
+    color: @text;
 }
 
 tooltip {
-    background: #161B22;
-    border-radius: 4px;
-    color: #C9D1D9;
+    background: @base;
+    border: 1px solid @surface1;
+    border-radius: 10px;
+}
+tooltip label {
+    color: @text;
+    padding: 2px 4px;
+}
+
+/* ── islands ───────────────────────────────────────────── */
+#custom-logo,
+#workspaces,
+#mode,
+#scratchpad,
+#mpris,
+#clock,
+#system,
+#connect,
+#pulseaudio,
+#tray,
+#idle_inhibitor,
+#custom-power {
+    background: alpha(@base, 0.92);
+    border: 1px solid alpha(@surface1, 0.8);
+    border-radius: 12px;
+    padding: 0 14px;
+}
+
+/* ── left ──────────────────────────────────────────────── */
+#custom-logo {
+    color: @blue;
+    font-size: 17px;
+    padding: 0 14px 0 12px;
 }
 
 #workspaces {
-    padding-right: 0;
+    padding: 3px 4px;
 }
-
 #workspaces button {
-    padding: 4px;
-    color: #C9D1D9;
+    color: @overlay0;
+    background: transparent;
+    padding: 0 9px;
+    margin: 0 1px;
+    border-radius: 9px;
+    transition: all 0.2s ease;
 }
-
-#clock {
-    padding-right: 90px;
-    padding-left: 16px;
+#workspaces button:hover {
+    color: @text;
+    background: @surface0;
+    box-shadow: none;
 }
-
-#workspaces button.active {
-    border: 2px solid #58A6FF;
-    color: #0D1117;
-    border-radius: 4px;
-    margin-top: 2px;
-    transition: none;
+#workspaces button.visible {
+    color: @subtext0;
 }
-
 #workspaces button.focused {
-    color: #58A6FF;
+    color: @crust;
+    background: @mauve;
+    padding: 0 14px;
 }
-
 #workspaces button.urgent {
-    color: #FF7B72;
+    color: @crust;
+    background: @red;
 }
 
-#workspaces button.hover {
-    color: #C9D1D9;
-    background: rgba(22, 27, 34, 0.70);
+#mode {
+    color: @crust;
+    background: @peach;
+    border-color: @peach;
+}
+#scratchpad {
+    color: @subtext0;
 }
 
-window#waybar.empty #window {
-    padding: 0;
-    margin: 0;
-    opacity: 0;
+#mpris {
+    color: @green;
+}
+#mpris.paused {
+    color: @overlay0;
 }
 
-#tray {
-    margin-right: 4px;
+/* ── center ────────────────────────────────────────────── */
+#clock {
+    color: @lavender;
+    padding: 0 18px;
 }
 
-#keyboard-state,
-#network,
-#mpd,
-#pulseaudio,
-#cpu,
-#memory {
-    font-size: 9pt;
+/* ── right ─────────────────────────────────────────────── */
+#system,
+#connect {
+    padding: 0 6px;
+}
+#cpu, #memory, #temperature,
+#bluetooth, #network {
+    padding: 0 8px;
+}
+
+#cpu         { color: @sapphire; }
+#memory      { color: @teal; }
+#temperature { color: @peach; }
+#cpu.warning, #memory.warning { color: @yellow; }
+#cpu.critical, #memory.critical, #temperature.critical { color: @red; }
+
+#bluetooth            { color: @blue; }
+#bluetooth.connected  { color: @blue; }
+#bluetooth.off,
+#bluetooth.disabled   { color: @overlay0; }
+#network              { color: @green; }
+#network.disconnected { color: @red; }
+
+#pulseaudio       { color: @pink; }
+#pulseaudio.muted { color: @overlay0; }
+
+#tray { padding: 0 10px; }
+#tray > .passive        { -gtk-icon-effect: dim; }
+#tray > .needs-attention { -gtk-icon-effect: highlight; }
+
+#idle_inhibitor           { color: @overlay0; padding: 0 13px; }
+#idle_inhibitor.activated { color: @yellow; }
+
+#custom-power {
+    color: @red;
+    padding: 0 15px 0 13px;
+}
+#custom-power:hover {
+    background: @red;
+    color: @crust;
+}
+
+/* power menu popup */
+menu {
+    background: @base;
+    border: 1px solid @surface1;
+    border-radius: 10px;
+    padding: 4px;
+}
+menuitem {
+    color: @text;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+menuitem:hover {
+    background: @surface0;
+    color: @mauve;
 }
