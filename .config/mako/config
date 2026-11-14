@@ -1,0 +1,23 @@
+# Catppuccin Mocha
+font=FiraCode Nerd Font 11
+background-color=#1e1e2eff
+text-color=#cdd6f4
+border-color=#cba6f7
+progress-color=over #313244
+border-size=2
+border-radius=12
+padding=12,16
+margin=10
+width=380
+max-icon-size=48
+anchor=top-right
+default-timeout=6000
+layer=overlay
+
+[urgency=low]
+border-color=#45475a
+default-timeout=4000
+
+[urgency=critical]
+border-color=#f38ba8
+default-timeout=0

@@ -1,20 +1,17 @@
-# Remove window title bars
-default_border pixel 1
-default_floating_border pixel 1
+# Thin borders, no title bars
+default_border pixel 2
+default_floating_border pixel 2
 
-# GitHub Dark Theme Variables
-set $bg        #0d1117
-set $bg_alt    #161b22
-set $fg        #c9d1d9
-set $accent    #58a6ff
-set $urgent    #f85149
-set $inactive  #30363d
+# Edge gap = inner + outer = 10px, lining windows up with waybar's 10px margins.
+gaps inner 8
+gaps outer 2
 
-gaps inner 0
-gaps outer 0
+# Catppuccin Mocha        border  bg      text    indicator child_border
+client.focused           #cba6f7 #1e1e2e #cdd6f4 #f5c2e7   #cba6f7
+client.focused_inactive  #45475a #1e1e2e #cdd6f4 #45475a   #45475a
+client.unfocused         #313244 #1e1e2e #a6adc8 #313244   #313244
+client.urgent            #f38ba8 #1e1e2e #f38ba8 #f38ba8   #f38ba8
+client.placeholder       #313244 #1e1e2e #cdd6f4 #313244   #313244
+client.background        #1e1e2e
 
-client.focused          $bg_alt $accent $accent $accent
-client.focused_inactive $inactive $bg_alt $fg $fg
-client.unfocused        $bg $bg $fg $fg
-client.urgent           $urgent $urgent $fg $fg
-client.placeholder      $inactive $inactive $fg $fg
+output * bg ~/.config/sway/wallpaper.png fill

@@ -1,0 +1,14 @@
+# SwayFX-only effects (rounded corners, shadows). Included from config only
+# when running SwayFX; plain sway rejects these commands.
+corner_radius 12
+smart_corner_radius enable
+
+shadows enable
+shadows_on_csd disable
+shadow_blur_radius 22
+shadow_offset 0 4
+shadow_color #11111bcc
+shadow_inactive_color #11111b99
+
+# Keep the floating TUI popups (bluesink/airlink/soundmix) crisp
+default_dim_inactive 0.0
