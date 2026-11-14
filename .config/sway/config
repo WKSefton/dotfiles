@@ -12,3 +12,6 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# Waybar popups (bluesink / airlink / soundmix TUIs) float centered
+for_window [app_id="^(bluesink|airlink|soundmix)$"] floating enable, resize set 1000 640, move position center

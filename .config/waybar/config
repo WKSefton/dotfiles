@@ -125,7 +125,7 @@
         "tooltip-format": "{controller_alias}\t{controller_address}\n{num_connections} connected",
         "tooltip-format-connected": "{controller_alias}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "on-click": "foot -e bluesink"
+        "on-click": "foot --app-id=bluesink -e bluesink"
     },
     "network": {
         "format-wifi": "{icon} {signalStrength}%",
@@ -135,7 +135,8 @@
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip-format-wifi": "{essid}\n{ipaddr}/{cidr} via {gwaddr}",
         "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr} via {gwaddr}",
-        "tooltip-format-disconnected": "Disconnected"
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "foot --app-id=airlink -e airlink"
     },
 
     "pulseaudio": {
@@ -154,8 +155,8 @@
         },
         "tooltip-format": "{desc}",
         "scroll-step": 5,
-        "on-click": "pavucontrol",
-        "on-click-right": "foot -e bluesink",
+        "on-click": "foot --app-id=soundmix -e soundmix",
+        "on-click-right": "pavucontrol",
         "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     "tray": {
